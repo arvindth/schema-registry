@@ -259,7 +259,7 @@ public class RestService implements Configurable {
         ErrorMessage errorMessage;
         try (InputStream es = connection.getErrorStream()) {
           errorMessage = jsonDeserializer.readValue(es, ErrorMessage.class);
-        } catch (JsonProcessingException e) {
+        } catch (JsonProcessingException | IllegalArgumentException e) {
           errorMessage = new ErrorMessage(JSON_PARSE_ERROR_CODE, e.getMessage());
         }
         throw new RestClientException(errorMessage.getMessage(), responseCode,
