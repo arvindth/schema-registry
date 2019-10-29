@@ -44,10 +44,6 @@
             <groupId>io.confluent</groupId>
             <artifactId>common-config</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
